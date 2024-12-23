@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "jsx": "react",
+      "esModuleInterop": true,
+      "strict": true,
+      "outDir": "./dist"
+    },
+    "include": ["emails", "scripts"]
+  }
+  
