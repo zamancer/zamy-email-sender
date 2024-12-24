@@ -1,6 +1,6 @@
-# React Email Starter
+# Zamy Email Sender
 
-A live preview right in your browser so you don't need to keep sending real emails during development.
+This is a project I am using in order to develop and automate some emails for different hobbies and side hustle projects. It is based on top of react email starter template.
 
 ## Getting Started
 
