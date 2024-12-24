@@ -24,6 +24,7 @@ async function sendEmail() {
     console.log('✅ Email sent successfully:', response);
   } catch (error) {
     console.error('❌ Failed to send email:', error);
+    process.exit(1);
   }
 }
 
