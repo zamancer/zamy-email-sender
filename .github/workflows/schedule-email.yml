@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Send Xmas Email
-        run: node scripts/sendEmail.js
+        run: npm run send-email
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           XMAS_IMAGE_URL: ${{ secrets.XMAS_IMAGE_URL }}
