@@ -1,0 +1,30 @@
+name: "Test Xmas Email"
+
+on:
+  workflow_dispatch: # Allows manual trigger
+  schedule:
+    - cron: '0 3 24 12 *' # 3 AM UTC on Dec 24 (9 PM CST on Dec 23)
+
+jobs:
+  test-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Send Test Xmas Email
+        run: npm run send-email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          XMAS_IMAGE_URL: ${{ secrets.XMAS_IMAGE_URL }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
