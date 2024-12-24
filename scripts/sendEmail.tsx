@@ -33,10 +33,13 @@ async function sendEmail() {
       throw new Error('No recipients configured');
     }
 
+    const RICK_ROLL_URL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    const xmasVideoUrl = process.env.XMAS_VIDEO_URL || RICK_ROLL_URL;
+
     // Send individual emails to each recipient
     const emailPromises = recipients.map(recipient => {
       const emailHtml = ReactDOMServer.renderToStaticMarkup(
-        <NavidadEmail recipientName={recipient.name} />
+        <NavidadEmail recipientName={recipient.name} videoUrl={xmasVideoUrl} />
       );
 
       return resend.emails.send({
