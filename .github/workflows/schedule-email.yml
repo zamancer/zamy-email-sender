@@ -1,0 +1,28 @@
+name: "Send Xmas Email"
+
+on:
+  schedule:
+    - cron: '0 1 25 12 *' # At 1:00 AM on December 25th
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Send Xmas Email
+        run: node scripts/sendEmail.js
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          XMAS_IMAGE_URL: ${{ secrets.XMAS_IMAGE_URL }}
