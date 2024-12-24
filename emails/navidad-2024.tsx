@@ -34,7 +34,7 @@ export const NavidadEmail: React.FC<NavidadEmailProps> = ({
           {/* Header with Christmas Image */}
           <Section style={styles.header}>
             <Img
-              src={`${baseUrl}/static/winter.jpg`}
+              src={`${baseUrl}/static/winter_2.jpg`}
               alt="Christmas Decorations"
               width="600"
               height="200"
