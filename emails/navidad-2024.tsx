@@ -105,7 +105,7 @@ export const NavidadEmail: React.FC<NavidadEmailProps> = ({
                 <Section style={styles.timelineEntry}>
                   <Text style={styles.month}>🗓️ Octubre</Text>
                   <Text style={styles.experience}>
-                    Al invertir en mi lado creativo con música y clases de oratoria, cultivé la <span style={styles.highlight}>expresión</span>, encontrando nuevas formas de conectar conmigo mismo y con los demás. 🎸🎤
+                    Al invertir en mi lado creativo con música y clases de oratoria, cultivé la <span style={styles.highlight}>expresividad</span>, encontrando nuevas formas de conectar conmigo mismo y con los demás. 🎸🎤
                   </Text>
                   <Text style={styles.wish}>
                     <em>Espero que este año encuentres una forma única y alegre de expresarte y ser escuchado.</em>
