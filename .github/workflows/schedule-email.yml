@@ -2,7 +2,7 @@ name: "Send Xmas Email"
 
 on:
   schedule:
-    - cron: '0 1 25 12 *' # At 1:00 AM on December 25th
+    - cron: '17 6 25 12 *' # At 6:17 AM UTC (00:17 AM CST on Dec 25)
   workflow_dispatch: # Allows manual trigger
 
 jobs:
