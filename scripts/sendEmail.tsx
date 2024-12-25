@@ -45,7 +45,7 @@ async function sendEmail() {
       return resend.emails.send({
         from: fromEmail,
         to: recipient.email,
-        subject: `🎁 Un pedacito de mi año para acompañar tu Navidad! 🎄`,
+        subject: `🎁 ¡Un pedacito de mi año para acompañar tu Navidad! 🎄`,
         html: emailHtml,
       });
     });

@@ -53,7 +53,7 @@ export const NavidadEmail: React.FC<NavidadEmailProps> = ({
               </Text>
               
               <Text style={styles.paragraph}>
-                Este año ha estado lleno de aprendizajes y momentos que me han marcado. Quiero compartir contigo algunos de los instantes que más alegría y satisfacción me trajeron, junto con lo que aprendí de cada uno. Y, por supuesto, desearte que algo de esto también ilumine tu camino en el próximo año:
+                Este año ha estado lleno de aprendizajes y momentos que me han marcado. Quiero compartir contigo algunos de los meses que más alegría y satisfacción me trajeron, junto con lo que aprendí de cada uno. Y, por supuesto, desearte que algo de esto también ilumine tu camino en el próximo año:
               </Text>
 
               {/* Timeline Entries */}
