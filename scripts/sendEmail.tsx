@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { Resend } from 'resend';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import NavidadEmail from '../emails/navidad-2024';
+import Navidad2025Email from '../emails/navidad-2025';
 import { Recipient } from './types';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -28,30 +28,34 @@ function getRecipients(): Recipient[] {
 async function sendEmail() {
   try {
     const recipients = getRecipients();
-    
+
     if (recipients.length === 0) {
       throw new Error('No recipients configured');
     }
 
-    const RICK_ROLL_URL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    const xmasVideoUrl = process.env.XMAS_VIDEO_URL || RICK_ROLL_URL;
+    console.log(`📧 Sending Navidad 2025 email to ${recipients.length} recipient(s)...`);
 
     // Send individual emails to each recipient
     const emailPromises = recipients.map(recipient => {
       const emailHtml = ReactDOMServer.renderToStaticMarkup(
-        <NavidadEmail recipientName={recipient.name} videoUrl={xmasVideoUrl} />
+        <Navidad2025Email recipientName={recipient.name} />
       );
+
+      console.log(`  → ${recipient.name} (${recipient.email})`);
 
       return resend.emails.send({
         from: fromEmail,
         to: recipient.email,
-        subject: `🎁 ¡Un pedacito de mi año para acompañar tu Navidad! 🎄`,
+        subject: `Un calendario de adviento especial te espera...`,
         html: emailHtml,
       });
     });
 
     const responses = await Promise.all(emailPromises);
-    console.log('✅ Emails sent successfully:', responses);
+    console.log('\n✅ All emails sent successfully!');
+    responses.forEach((res, i) => {
+      console.log(`  ${recipients[i].name}: ${res.data?.id || 'sent'}`);
+    });
   } catch (error) {
     console.error('❌ Failed to send email:', error);
     process.exit(1);

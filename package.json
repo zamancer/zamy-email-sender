@@ -6,8 +6,7 @@
     "build": "email build",
     "dev": "email dev",
     "export": "email export",
-    "send-email": "ts-node scripts/sendEmail.tsx",
-    "send-navidad-2025": "ts-node scripts/sendNavidad2025.tsx"
+    "send-email": "ts-node scripts/sendEmail.tsx"
   },
   "dependencies": {
     "@react-email/components": "^0.0.31",
