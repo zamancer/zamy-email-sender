@@ -60,28 +60,24 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
                 Calendario de Adviento 2025
               </Text>
               <Text style={styles.adventDescription}>
-                12 puertas por abrir
+                12 ventanas por abrir
               </Text>
               <Text style={styles.adventHint}>
-                Al completar todas, te espera un regalo especial de mi parte.
+                Al completar todas, te espera una sorpresa especial.
               </Text>
-            </Section>
-
-            <Text style={styles.paragraph}>
-              Solo necesitas tu correo para entrar. Cada día podrás desbloquear
-              una nueva puerta del calendario.
-            </Text>
-
-            {/* CTA Button */}
-            <Section style={styles.ctaSection}>
               <Button style={styles.ctaButton} href={adventCalendarUrl}>
                 Abrir mi calendario
               </Button>
             </Section>
 
             <Text style={styles.paragraph}>
+              Solo necesitas tu correo para entrar. Cada día podrás desbloquear
+              una nueva ventana del calendario.
+            </Text>
+
+            <Text style={styles.paragraph}>
               Gracias por ser parte de mi vida. Espero que disfrutes esta
-              pequeña tradición tanto como yo disfruté crearla para ti.
+              pequeña actividad tanto como yo disfruté crearla para ti.
             </Text>
 
             {/* Signature */}
@@ -98,7 +94,7 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
           {/* Footer */}
           <Section style={styles.footer}>
             <Text style={styles.footerText}>
-              Felices fiestas
+              Felices fiestas &#127876;&#10052;&#127873;
             </Text>
             <Text style={styles.copyright}>
               Zamy The Zam, 2025
@@ -183,12 +179,8 @@ const styles = {
   adventHint: {
     fontSize: '15px',
     color: '#666666',
-    margin: '0',
+    margin: '0 0 24px 0',
     fontStyle: 'italic',
-  },
-  ctaSection: {
-    textAlign: 'center' as const,
-    margin: '32px 0',
   },
   ctaButton: {
     backgroundColor: '#2d3a5c',
