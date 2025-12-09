@@ -50,7 +50,7 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
 
             <Text style={styles.paragraph}>
               He creado un <strong>calendario de adviento digital</strong> especialmente
-              para mis amigos cercanos. Son <strong>12 días</strong> de pequeñas sorpresas
+              para mis amigos. Son <strong>12 días</strong> de pequeñas sorpresas
               que podrás ir descubriendo poco a poco.
             </Text>
 
