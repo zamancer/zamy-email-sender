@@ -12,13 +12,12 @@ import {
 
 interface Navidad2025EmailProps {
   recipientName?: string;
+  adventCalendarUrl: string;
 }
-
-const adventCalendarUrl =
-  process.env.ADVENT_CALENDAR_URL || "https://advent-calendar.example.com";
 
 export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
   recipientName = "[Amigo]",
+  adventCalendarUrl,
 }) => {
   return (
     <Html lang="es">
