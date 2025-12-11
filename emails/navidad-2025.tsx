@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Html,
   Head,
@@ -7,23 +7,18 @@ import {
   Container,
   Section,
   Text,
-  Link,
-  Img,
   Button,
-} from '@react-email/components';
+} from "@react-email/components";
 
 interface Navidad2025EmailProps {
   recipientName?: string;
 }
 
-const baseUrl = process.env.XMAS_IMAGE_URL
-  ? `https://${process.env.XMAS_IMAGE_URL}`
-  : "";
-
-const adventCalendarUrl = process.env.ADVENT_CALENDAR_URL || "https://advent-calendar.example.com";
+const adventCalendarUrl =
+  process.env.ADVENT_CALENDAR_URL || "https://advent-calendar.example.com";
 
 export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
-  recipientName = '[Amigo]',
+  recipientName = "[Amigo]",
 }) => {
   return (
     <Html lang="es">
@@ -34,24 +29,21 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
           {/* Header */}
           <Section style={styles.header}>
             <Text style={styles.starDecoration}>&#10022;</Text>
-            <Text style={styles.greeting}>
-              ¡Hola, {recipientName}!
-            </Text>
-            <Text style={styles.subGreeting}>
-              Navidad 2025
-            </Text>
+            <Text style={styles.greeting}>¡Hola, {recipientName}!</Text>
+            <Text style={styles.subGreeting}>Navidad 2025</Text>
           </Section>
 
           {/* Main Content */}
           <Section style={styles.content}>
             <Text style={styles.paragraph}>
-              Este año quise hacer algo diferente para celebrar la temporada contigo.
+              Este año quise hacer algo diferente para celebrar la temporada
+              contigo.
             </Text>
 
             <Text style={styles.paragraph}>
-              He creado un <strong>calendario de adviento digital</strong> especialmente
-              para mis amigos. Son <strong>12 días</strong> de pequeñas sorpresas
-              que podrás ir descubriendo poco a poco.
+              He creado un <strong>calendario de adviento digital</strong>{" "}
+              especialmente para mis amigos. Son <strong>12 días</strong> de
+              pequeñas sorpresas que podrás ir descubriendo poco a poco.
             </Text>
 
             {/* Advent Calendar Card */}
@@ -82,12 +74,8 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
 
             {/* Signature */}
             <Section style={styles.signature}>
-              <Text style={styles.signatureText}>
-                Con cariño,
-              </Text>
-              <Text style={styles.signatureName}>
-                El Zami
-              </Text>
+              <Text style={styles.signatureText}>Con cariño,</Text>
+              <Text style={styles.signatureName}>El Zami</Text>
             </Section>
           </Section>
 
@@ -96,9 +84,7 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
             <Text style={styles.footerText}>
               Felices fiestas &#127876;&#10052;&#127873;
             </Text>
-            <Text style={styles.copyright}>
-              Zamy The Zam, 2025
-            </Text>
+            <Text style={styles.copyright}>Zamy The Zam, 2025</Text>
           </Section>
         </Container>
       </Body>
@@ -108,122 +94,122 @@ export const Navidad2025Email: React.FC<Navidad2025EmailProps> = ({
 
 const styles = {
   body: {
-    backgroundColor: '#1a1f3c',
-    margin: '0',
-    padding: '40px 20px',
+    backgroundColor: "#1a1f3c",
+    margin: "0",
+    padding: "40px 20px",
     fontFamily: 'Georgia, "Times New Roman", serif',
   },
   container: {
-    maxWidth: '520px',
-    margin: '0 auto',
-    backgroundColor: '#ffffff',
-    borderRadius: '16px',
-    overflow: 'hidden',
-    boxShadow: '0 4px 24px rgba(0, 0, 0, 0.3)',
+    maxWidth: "520px",
+    margin: "0 auto",
+    backgroundColor: "#ffffff",
+    borderRadius: "16px",
+    overflow: "hidden",
+    boxShadow: "0 4px 24px rgba(0, 0, 0, 0.3)",
   },
   header: {
-    backgroundColor: '#2d3a5c',
-    padding: '48px 32px',
-    textAlign: 'center' as const,
+    backgroundColor: "#2d3a5c",
+    padding: "48px 32px",
+    textAlign: "center" as const,
   },
   starDecoration: {
-    fontSize: '48px',
-    color: '#d4a855',
-    margin: '0 0 16px 0',
-    lineHeight: '1',
+    fontSize: "48px",
+    color: "#d4a855",
+    margin: "0 0 16px 0",
+    lineHeight: "1",
   },
   greeting: {
-    color: '#ffffff',
-    fontSize: '28px',
-    fontWeight: 'normal',
-    margin: '0 0 8px 0',
-    letterSpacing: '0.5px',
+    color: "#ffffff",
+    fontSize: "28px",
+    fontWeight: "normal",
+    margin: "0 0 8px 0",
+    letterSpacing: "0.5px",
   },
   subGreeting: {
-    color: '#a8b4d4',
-    fontSize: '16px',
-    fontWeight: 'normal',
-    margin: '0',
-    letterSpacing: '2px',
-    textTransform: 'uppercase' as const,
+    color: "#a8b4d4",
+    fontSize: "16px",
+    fontWeight: "normal",
+    margin: "0",
+    letterSpacing: "2px",
+    textTransform: "uppercase" as const,
   },
   content: {
-    padding: '40px 32px',
+    padding: "40px 32px",
   },
   paragraph: {
-    fontSize: '17px',
-    lineHeight: '1.7',
-    color: '#3d3d3d',
-    margin: '0 0 24px 0',
+    fontSize: "17px",
+    lineHeight: "1.7",
+    color: "#3d3d3d",
+    margin: "0 0 24px 0",
   },
   adventCard: {
-    backgroundColor: '#f7f5f0',
-    borderRadius: '12px',
-    padding: '32px 24px',
-    margin: '32px 0',
-    textAlign: 'center' as const,
-    border: '2px solid #d4a855',
+    backgroundColor: "#f7f5f0",
+    borderRadius: "12px",
+    padding: "32px 24px",
+    margin: "32px 0",
+    textAlign: "center" as const,
+    border: "2px solid #d4a855",
   },
   adventTitle: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    color: '#2d3a5c',
-    margin: '0 0 8px 0',
+    fontSize: "20px",
+    fontWeight: "bold",
+    color: "#2d3a5c",
+    margin: "0 0 8px 0",
   },
   adventDescription: {
-    fontSize: '32px',
-    color: '#d4a855',
-    margin: '0 0 16px 0',
-    fontWeight: 'normal',
+    fontSize: "32px",
+    color: "#d4a855",
+    margin: "0 0 16px 0",
+    fontWeight: "normal",
   },
   adventHint: {
-    fontSize: '15px',
-    color: '#666666',
-    margin: '0 0 24px 0',
-    fontStyle: 'italic',
+    fontSize: "15px",
+    color: "#666666",
+    margin: "0 0 24px 0",
+    fontStyle: "italic",
   },
   ctaButton: {
-    backgroundColor: '#2d3a5c',
-    color: '#ffffff',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    padding: '16px 40px',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    display: 'inline-block',
+    backgroundColor: "#2d3a5c",
+    color: "#ffffff",
+    fontSize: "16px",
+    fontWeight: "bold",
+    padding: "16px 40px",
+    borderRadius: "8px",
+    textDecoration: "none",
+    display: "inline-block",
   },
   signature: {
-    marginTop: '40px',
-    paddingTop: '24px',
-    borderTop: '1px solid #e8e8e8',
-    textAlign: 'center' as const,
+    marginTop: "40px",
+    paddingTop: "24px",
+    borderTop: "1px solid #e8e8e8",
+    textAlign: "center" as const,
   },
   signatureText: {
-    fontSize: '16px',
-    color: '#666666',
-    margin: '0 0 4px 0',
+    fontSize: "16px",
+    color: "#666666",
+    margin: "0 0 4px 0",
   },
   signatureName: {
-    fontSize: '20px',
-    color: '#2d3a5c',
-    margin: '0',
-    fontWeight: 'bold',
+    fontSize: "20px",
+    color: "#2d3a5c",
+    margin: "0",
+    fontWeight: "bold",
   },
   footer: {
-    backgroundColor: '#2d3a5c',
-    padding: '24px 32px',
-    textAlign: 'center' as const,
+    backgroundColor: "#2d3a5c",
+    padding: "24px 32px",
+    textAlign: "center" as const,
   },
   footerText: {
-    color: '#d4a855',
-    fontSize: '14px',
-    margin: '0 0 8px 0',
-    letterSpacing: '1px',
+    color: "#d4a855",
+    fontSize: "14px",
+    margin: "0 0 8px 0",
+    letterSpacing: "1px",
   },
   copyright: {
-    fontSize: '12px',
-    color: '#a8b4d4',
-    margin: '0',
+    fontSize: "12px",
+    color: "#a8b4d4",
+    margin: "0",
   },
 } as const;
 
