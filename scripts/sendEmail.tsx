@@ -36,6 +36,10 @@ async function sendEmail() {
       throw new Error("No recipients configured");
     }
 
+    if (!fromEmail) {
+      throw new Error("RESEND_FROM_EMAIL environment variable is required");
+    }
+
     if (!adventCalendarUrl) {
       throw new Error("ADVENT_CALENDAR_URL environment variable is required");
     }
